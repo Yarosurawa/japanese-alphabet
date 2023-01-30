@@ -7,8 +7,71 @@
     font-family: 'Noto Sans JP', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
+    overflow: hidden;
     background: #151515;
+    width: 200vw;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.s-btn {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100vh;
+    width: 50px;
+    opacity: 0.1;
+    background: #121212;
+    transition: background-color 200ms ease, opacity 200ms ease;
+    border: none;
+}
+
+#turn-right {
+    right: 0;
+}
+
+#turn-left {
+    right: 0;
+    translate: 50px 0;
+}
+
+.d-btn {
+    z-index: 3;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    width: 100vw;
+    font-size: 2rem;
+    height: 60px;
+    opacity: 0.1;
+    background: #121212;
+    transition: background-color 200ms ease, opacity 200ms ease;
+    border: none;
+}
+
+.s-btn:hover, .d-btn:hover {
+    opacity: 0.5;
+}
+
+.s-btn:active, .d-btn:active {
+    opacity: 0.9;
+}
+
+.table-container {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,4 +101,15 @@ td {
 sub {
     color: #666;
     font-size: 0.7rem;
+}
+
+.settings-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
